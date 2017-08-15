@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA579A571F42B7FB008C396B /* GradeStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA579A561F42B7FB008C396B /* GradeStarView.m */; };
 		FAA11F1F1F38428F007D9171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA11F1E1F38428F007D9171 /* main.m */; };
 		FAA11F221F38428F007D9171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA11F211F38428F007D9171 /* AppDelegate.m */; };
 		FAA11F251F38428F007D9171 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA11F241F38428F007D9171 /* ViewController.m */; };
 		FAA11F281F38428F007D9171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA11F261F38428F007D9171 /* Main.storyboard */; };
 		FAA11F2A1F38428F007D9171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA11F291F38428F007D9171 /* Assets.xcassets */; };
 		FAA11F2D1F38428F007D9171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA11F2B1F38428F007D9171 /* LaunchScreen.storyboard */; };
-		FAA11F361F384563007D9171 /* GradeStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA11F351F384563007D9171 /* GradeStarView.m */; };
 		FAA11F391F385627007D9171 /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA11F371F385627007D9171 /* emptyStar.png */; };
 		FAA11F3A1F385627007D9171 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA11F381F385627007D9171 /* Star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA579A551F42B7FB008C396B /* GradeStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeStarView.h; sourceTree = "<group>"; };
+		FA579A561F42B7FB008C396B /* GradeStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeStarView.m; sourceTree = "<group>"; };
 		FAA11F1A1F38428F007D9171 /* StarRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA11F1E1F38428F007D9171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAA11F201F38428F007D9171 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,8 +31,6 @@
 		FAA11F291F38428F007D9171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA11F2C1F38428F007D9171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA11F2E1F38428F007D9171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAA11F341F384563007D9171 /* GradeStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeStarView.h; sourceTree = "<group>"; };
-		FAA11F351F384563007D9171 /* GradeStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeStarView.m; sourceTree = "<group>"; };
 		FAA11F371F385627007D9171 /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyStar.png; sourceTree = "<group>"; };
 		FAA11F381F385627007D9171 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA579A541F42B7FB008C396B /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				FA579A551F42B7FB008C396B /* GradeStarView.h */,
+				FA579A561F42B7FB008C396B /* GradeStarView.m */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
 		FAA11F111F38428F007D9171 = {
 			isa = PBXGroup;
 			children = (
@@ -69,8 +78,7 @@
 				FAA11F211F38428F007D9171 /* AppDelegate.m */,
 				FAA11F231F38428F007D9171 /* ViewController.h */,
 				FAA11F241F38428F007D9171 /* ViewController.m */,
-				FAA11F341F384563007D9171 /* GradeStarView.h */,
-				FAA11F351F384563007D9171 /* GradeStarView.m */,
+				FA579A541F42B7FB008C396B /* StartView */,
 				FAA11F371F385627007D9171 /* emptyStar.png */,
 				FAA11F381F385627007D9171 /* Star.png */,
 				FAA11F261F38428F007D9171 /* Main.storyboard */,
@@ -165,7 +173,7 @@
 			files = (
 				FAA11F251F38428F007D9171 /* ViewController.m in Sources */,
 				FAA11F221F38428F007D9171 /* AppDelegate.m in Sources */,
-				FAA11F361F384563007D9171 /* GradeStarView.m in Sources */,
+				FA579A571F42B7FB008C396B /* GradeStarView.m in Sources */,
 				FAA11F1F1F38428F007D9171 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +333,7 @@
 				FAA11F331F38428F007D9171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

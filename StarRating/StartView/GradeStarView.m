@@ -13,7 +13,7 @@
 #define kFOREGROUND_STAR @"Star"
 
 typedef NS_ENUM(NSInteger,CommentDescribe) {
-    CommentDescribeVeryBad,//很差
+    CommentDescribeVeryBad = 1,//很差
     CommentDescribeBad,//差
     CommentDescribeGeneral,//一般
     CommentDescribeGood,//好
@@ -70,7 +70,26 @@ typedef NS_ENUM(NSInteger,CommentDescribe) {
     [self addGestureRecognizer:panGR];
 }
 
-#pragma mark - setup 
+#pragma mark - private function
+
+- (void)setDefaultScore:(int)defaultScore
+{
+    _defaultScore = defaultScore;
+    
+    if (defaultScore <= 0) {
+        defaultScore = 0;
+    } else if (defaultScore > kNumberOfStar) {
+        defaultScore = kNumberOfStar;
+    }
+    self.userInteractionEnabled = !defaultScore ? YES : NO;
+    
+    
+    self.starForegroundView.frame = CGRectMake(0, 0, defaultScore * 2 * kImageWidth, kImageWidth);
+    //评论
+    self.commentLab.text = [self commentByCase:defaultScore];
+    
+    
+}
 
 - (void)returnScoreBlock:(StarScoreBlock)block
 {
@@ -124,16 +143,21 @@ typedef NS_ENUM(NSInteger,CommentDescribe) {
         p.x = self.frame.size.width;
     }
     
-    int currentX = (int) p.x/(2 * kImageWidth);
-    self.starForegroundView.frame = CGRectMake(0, 0, (currentX+1) * 2 * kImageWidth, kImageWidth);
+    int currentX = (int) p.x/(2 * kImageWidth) + 1;
     
+    //重新绘制starForegroundView
+    [self redrawStartView:currentX];
+
+}
+
+- (void)redrawStartView:(int)currentX{
+    self.starForegroundView.frame = CGRectMake(0, 0, currentX * 2 * kImageWidth, kImageWidth);
     //评论
     self.commentLab.text = [self commentByCase:currentX];
     
     if (self.scoreBlock) {
         self.scoreBlock(currentX);
     }
-
 }
 
 /** 评论 */

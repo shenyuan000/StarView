@@ -12,6 +12,8 @@ typedef void(^StarScoreBlock)(int score);
 @interface GradeStarView : UIView
 /** block */
 @property (nonatomic, copy) StarScoreBlock scoreBlock;
+/** defaultInt */
+@property (nonatomic, assign) int defaultScore;
 - (id)initWithFrame:(CGRect)frame numberOfStar:(int)number;
 - (void)returnScoreBlock:(StarScoreBlock)block;
 @end
